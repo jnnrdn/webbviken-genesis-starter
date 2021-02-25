@@ -3,5 +3,6 @@
 .prettierignore
 
 # Other
+dist
 node_modules
 public

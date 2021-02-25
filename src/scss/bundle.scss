@@ -1,0 +1,8 @@
+@import './components/slider.scss';
+
+$colour: pink;
+
+body {
+    background-color: $colour;
+    display: grid;
+}
