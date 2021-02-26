@@ -1,8 +1,8 @@
+import { src, dest, watch, series, parallel } from 'gulp'
 import del from 'del'
 import postcss from 'gulp-postcss'
 import sourcemaps from 'gulp-sourcemaps'
 import autoprefixer from 'autoprefixer'
-import { src, dest, watch, series, parallel } from 'gulp'
 import yargs from 'yargs'
 import sass from 'gulp-sass'
 import cleanCss from 'gulp-clean-css'
@@ -36,14 +36,6 @@ export const copy = () => {
 
 export const clean = () => del(['dist'])
 
-export const watchForChanges = () => {
-  watch('src/scss/**/*.scss', styles)
-  watch('src/images/**/*.{jpg,jpeg,png,svg,gif}', series(images, reload))
-  watch(['src/**/*', '!src/{images,js,scss}', '!src/{images,js,scss}/**/*'], series(copy, reload))
-  watch('src/js/**/*.js', series(scripts, reload))
-  watch('**/*.php', reload)
-}
-
 export const scripts = () => {
   return src('src/js/bundle.js')
     .pipe(webpack({
@@ -76,9 +68,18 @@ export const serve = done => {
   })
   done()
 }
+
 export const reload = done => {
   server.reload()
   done()
+}
+
+export const watchForChanges = () => {
+  watch('src/scss/**/*.scss', styles)
+  watch('src/images/**/*.{jpg,jpeg,png,svg,gif}', series(images, reload))
+  watch(['src/**/*', '!src/{images,js,scss}', '!src/{images,js,scss}/**/*'], series(copy, reload))
+  watch('src/js/**/*.js', series(scripts, reload))
+  watch('**/*.php', reload)
 }
 
 export const dev = series(clean, parallel(styles, images, copy, scripts), serve, watchForChanges)
