@@ -1,8 +1,10 @@
-@import './components/slider.scss';
+@use './abstracts/colors';
+@use './abstracts/mixins';
 
-$colour: pink;
+@use './components/slider';
+
 
 body {
-    background-color: $colour;
+    background-color: colors.$colour;
     display: grid;
 }
