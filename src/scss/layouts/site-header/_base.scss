@@ -1,0 +1,23 @@
+.site-header {
+	background-color: #fff;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+	padding: 0 30px;
+}
+
+@media only screen and (min-width: 960px) {
+
+	/* Site Header
+	--------------------------------------------- */
+
+	.site-header {
+		position: -webkit-sticky;
+		position: sticky;
+		top: 0;
+		z-index: 9999;
+	}
+
+	.admin-bar .site-header {
+		top: 32px;
+	}
+
+}
