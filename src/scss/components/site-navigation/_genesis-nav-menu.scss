@@ -1,3 +1,5 @@
+@use '../../abstracts/colors' as c;
+
 .genesis-nav-menu {
 	clear: both;
 	line-height: 1;
@@ -26,7 +28,7 @@
 .genesis-nav-menu .current-menu-item > a,
 .genesis-nav-menu .sub-menu .current-menu-item > a:focus,
 .genesis-nav-menu .sub-menu .current-menu-item > a:hover {
-	color: #0073e5;
+	color: c.$teal;
 	text-decoration: none;
 }
 
@@ -91,7 +93,7 @@
 
 	.genesis-nav-menu > .menu-highlight > a:focus,
 	.genesis-nav-menu > .menu-highlight > a:hover {
-		background-color: #0073e5;
+		background-color: c.$teal;
 	}
 
 	.genesis-nav-menu .sub-menu,
