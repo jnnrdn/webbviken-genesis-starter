@@ -36,7 +36,7 @@ return array(
 	'genesis-after-entry-widget-area' => '',
 	'genesis-footer-widgets'          => 3,
 	'genesis-menus'                   => array(
-		'primary'   => __( 'Header Menu', 'genesis-sample' ),
-		'secondary' => __( 'Footer Menu', 'genesis-sample' ),
+		'primary'   => __( 'Header Menu', 'webbviken-genesis-starter' ),
+		'secondary' => __( 'Footer Menu', 'webbviken-genesis-starter' ),
 	),
 );

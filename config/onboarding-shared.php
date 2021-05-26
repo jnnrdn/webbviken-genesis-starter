@@ -16,22 +16,22 @@
 return array(
 	'plugins'          => array(
 		array(
-			'name'       => __( 'Genesis Blocks', 'genesis-sample' ),
+			'name'       => __( 'Genesis Blocks', 'webbviken-genesis-starter' ),
 			'slug'       => 'genesis-blocks/genesis-blocks.php',
 			'public_url' => 'https://wordpress.org/plugins/genesis-blocks/',
 		),
 		array(
-			'name'       => __( 'Simple Social Icons', 'genesis-sample' ),
+			'name'       => __( 'Simple Social Icons', 'webbviken-genesis-starter' ),
 			'slug'       => 'simple-social-icons/simple-social-icons.php',
 			'public_url' => 'https://wordpress.org/plugins/simple-social-icons/',
 		),
 		array(
-			'name'       => __( 'Genesis eNews Extended (Third Party)', 'genesis-sample' ),
+			'name'       => __( 'Genesis eNews Extended (Third Party)', 'webbviken-genesis-starter' ),
 			'slug'       => 'genesis-enews-extended/plugin.php',
 			'public_url' => 'https://wordpress.org/plugins/genesis-enews-extended/',
 		),
 		array(
-			'name'       => __( 'WPForms Lite (Third Party)', 'genesis-sample' ),
+			'name'       => __( 'WPForms Lite (Third Party)', 'webbviken-genesis-starter' ),
 			'slug'       => 'wpforms-lite/wpforms.php',
 			'public_url' => 'https://wordpress.org/plugins/wpforms-lite/',
 		),
