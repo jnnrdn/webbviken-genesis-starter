@@ -12,20 +12,11 @@ GitHub project link: https://github.com/jnnrdn/webbviken-genesis-starter.
 
 ## For Developers
 
-The version of [Webbviken Genesis Starter on GitHub](https://github.com/jnnrdn/webbviken-genesis-starter/) includes tooling to check code against WordPress standards. To use it:
-
-1. Install Composer globally on your development machine. [See Composer setup steps](https://getcomposer.org/doc/00-intro.md#downloading-the-composer-executable).
-2. In the command line, change directory to the Webbviken Genesis Starter folder.
-3. Type the command `composer install` to install PHP development dependencies.
-4. Type `composer phpcs` to run coding standards checks.
-
-You'll see output highlighting issues with PHP files that do not conform to Webbviken Genesis Starter coding standards.
-
-Run `composer phpcbf` if you see “phpcbf can fix the x marked sniff violations automatically” in the output of `composer phpcs`.
+The version of [Webbviken Genesis Starter on GitHub](https://github.com/jnnrdn/webbviken-genesis-starter/) includes tools to build stylesheets with Sass and transpile ES6 with Babel.
 
 ### npm scripts
 
-Scripts are also provided to help with CSS linting, CSS autoprefixing, and creation of pot language files. To use them:
+Scripts are provided. To use them:
 
 1. Install [Node.js](https://nodejs.org/), which also gives you the Node Package Manager (npm).
 2. In the command line, change directory to the Webbviken Genesis Starter folder.
@@ -33,5 +24,5 @@ Scripts are also provided to help with CSS linting, CSS autoprefixing, and creat
 
 You can then type any of these commands:
 
-- `npm start` to start development processes (gulp, browsersync etc).
+- `npm start` to start development processes and watch for changes (gulp, browsersync etc).
 - `npm build` to build the project for production.
