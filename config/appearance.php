@@ -9,8 +9,8 @@
  */
 
 $genesis_sample_default_colors = array(
-	'link'   => '#008080',
-	'accent' => '#ffc0cb',
+	'link'   => '#2E8787',
+	'accent' => '#E0773E',
 );
 
 $genesis_sample_link_color = get_theme_mod(
