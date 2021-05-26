@@ -21,7 +21,7 @@ return array(
 		'breadcrumb_archive'        => 0,
 		'breadcrumb_404'            => 0,
 		'breadcrumb_attachment'     => 0,
-		'content_archive'           => 'full',
+		'content_archive'           => 'excerpts',
 		'content_archive_limit'     => 0,
 		'content_archive_thumbnail' => 0,
 		'entry_meta_after_content'  => '[post_categories] [post_tags]',
@@ -29,7 +29,7 @@ return array(
 		'image_size'                => 'genesis-singular-images',
 		'image_alignment'           => 'aligncenter',
 		'posts_nav'                 => 'numeric',
-		'site_layout'               => 'content-sidebar',
+		'site_layout'               => 'full-width-content',
 	),
 	'posts_per_page'       => 6,
 );
