@@ -1,11 +1,11 @@
 <?php
 /**
- * Genesis Sample.
+ * Webbviken Genesis Starter.
  *
  * This file adds the WooCommerce styles and the Customizer additions for WooCommerce to the Genesis Sample Theme.
  *
- * @package Genesis Sample
- * @author  StudioPress
+ * @package Webbviken Genesis Starter
+ * @author  Jenny Ryden
  * @license GPL-2.0-or-later
  * @link    https://www.studiopress.com/
  */
@@ -21,12 +21,12 @@ add_filter( 'woocommerce_enqueue_styles', 'genesis_sample_woocommerce_styles' );
  */
 function genesis_sample_woocommerce_styles( $enqueue_styles ) {
 
-	$enqueue_styles[ genesis_get_theme_handle() . '-woocommerce-styles' ] = [
+	$enqueue_styles[ genesis_get_theme_handle() . '-woocommerce-styles' ] = array(
 		'src'     => get_stylesheet_directory_uri() . '/lib/woocommerce/genesis-sample-woocommerce.css',
 		'deps'    => '',
 		'version' => genesis_get_theme_version(),
 		'media'   => 'screen',
-	];
+	);
 
 	return $enqueue_styles;
 

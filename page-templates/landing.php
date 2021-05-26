@@ -1,13 +1,13 @@
 <?php
 /**
- * Genesis Sample.
+ * Webbviken Genesis Starter.
  *
  * This file adds the landing page template to the Genesis Sample Theme.
  *
  * Template Name: Landing
  *
- * @package Genesis Sample
- * @author  StudioPress
+ * @package Webbviken Genesis Starter
+ * @author  Jenny Ryden
  * @license GPL-2.0-or-later
  * @link    https://www.studiopress.com/
  */

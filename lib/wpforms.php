@@ -6,7 +6,7 @@
  * page content with a working contact form block during one-click theme setup.
  *
  * @package StudioPress
- * @author  StudioPress
+ * @author  Jenny Ryden
  * @license GPL-2.0-or-later
  * @link    https://www.studiopress.com/
  */
@@ -53,11 +53,11 @@ function studiopress_maybe_create_wpforms_form() { // phpcs:ignore -- studiopres
 	// Creates a form using the WPForms 'contact' template.
 	$new_form_id = wpforms()->form->add(
 		esc_html__( 'Simple Contact Form', 'genesis-sample' ),
-		[],
-		[
+		array(),
+		array(
 			'template' => 'contact',
 			'builder'  => false,
-		]
+		)
 	);
 
 	if ( $new_form_id ) {
@@ -80,10 +80,10 @@ function studiopress_insert_contact_form( $content, $imported_posts ) { // phpcs
 	$form_id = studiopress_maybe_create_wpforms_form();
 
 	if ( $form_id && array_key_exists( 'contact', $imported_posts ) ) {
-		$contact_page = [
+		$contact_page = array(
 			'ID'           => $imported_posts['contact'],
 			'post_content' => "<!-- wp:wpforms/form-selector {\"formId\":\"{$form_id}\"} /-->",
-		];
+		);
 
 		wp_update_post( $contact_page );
 	}

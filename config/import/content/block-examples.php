@@ -1,13 +1,13 @@
 <?php
 /**
- * Genesis Sample.
+ * Webbviken Genesis Starter.
  *
  * Block example page content optionally installed after theme activation.
  *
  * Visit `/wp-admin/admin.php?page=genesis-getting-started` to trigger import.
  *
- * @package Genesis Sample
- * @author  StudioPress
+ * @package Webbviken Genesis Starter
+ * @author  Jenny Ryden
  * @license GPL-2.0-or-later
  * @link    https://www.studiopress.com/
  */

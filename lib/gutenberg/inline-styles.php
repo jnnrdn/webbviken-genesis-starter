@@ -2,8 +2,8 @@
 /**
  * Adds front-end inline styles for the custom Gutenberg color palette.
  *
- * @package Genesis Sample
- * @author  StudioPress
+ * @package Webbviken Genesis Starter
+ * @author  Jenny Ryden
  * @license GPL-2.0-or-later
  * @link    https://www.studiopress.com/
  */

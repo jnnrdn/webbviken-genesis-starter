@@ -1,11 +1,11 @@
 <?php
 /**
- * Genesis Sample.
+ * Webbviken Genesis Starter.
  *
  * This file adds the required WooCommerce setup functions to the Genesis Sample Theme.
  *
- * @package Genesis Sample
- * @author  StudioPress
+ * @package Webbviken Genesis Starter
+ * @author  Jenny Ryden
  * @license GPL-2.0-or-later
  * @link    https://www.studiopress.com/
  */
@@ -30,12 +30,12 @@ add_filter( 'woocommerce_style_smallscreen_breakpoint', 'genesis_sample_woocomme
 function genesis_sample_woocommerce_breakpoint() {
 
 	$current = genesis_site_layout( false );
-	$layouts = [
-		'one-sidebar' => [
+	$layouts = array(
+		'one-sidebar' => array(
 			'content-sidebar',
 			'sidebar-content',
-		],
-	];
+		),
+	);
 
 	if ( in_array( $current, $layouts['one-sidebar'], true ) ) {
 		return '1200px';
@@ -142,11 +142,11 @@ add_filter( 'woocommerce_get_image_size_gallery_thumbnail', 'genesis_sample_gall
  */
 function genesis_sample_gallery_image_thumbnail( $size ) {
 
-	$size = [
+	$size = array(
 		'width'  => 180,
 		'height' => 180,
 		'crop'   => 1,
-	];
+	);
 
 	return $size;
 

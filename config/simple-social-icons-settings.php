@@ -2,13 +2,13 @@
 /**
  * Genesis Sample Simple Social Icons default settings.
  *
- * @package Genesis Sample
- * @author  StudioPress
+ * @package Webbviken Genesis Starter
+ * @author  Jenny Ryden
  * @license GPL-2.0-or-later
  * @link    https://www.studiopress.com/
  */
 
-return [
+return array(
 	'alignment'              => 'alignleft',
 	'background_color'       => '#f5f5f5',
 	'background_color_hover' => '#333333',
@@ -17,4 +17,4 @@ return [
 	'icon_color'             => '#333333',
 	'icon_color_hover'       => '#ffffff',
 	'size'                   => 40,
-];
+);

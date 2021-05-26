@@ -4,20 +4,20 @@
  *
  * Theme supports.
  *
- * @package Genesis Sample
- * @author  StudioPress
+ * @package Webbviken Genesis Starter
+ * @author  Jenny Ryden
  * @license GPL-2.0-or-later
  * @link    https://my.studiopress.com/themes/genesis-sample/
  */
 
-return [
-	'genesis-custom-logo'             => [
+return array(
+	'genesis-custom-logo'             => array(
 		'height'      => 120,
 		'width'       => 700,
 		'flex-height' => true,
 		'flex-width'  => true,
-	],
-	'html5'                           => [
+	),
+	'html5'                           => array(
 		'caption',
 		'comment-form',
 		'comment-list',
@@ -26,17 +26,17 @@ return [
 		'search-form',
 		'script',
 		'style',
-	],
-	'genesis-accessibility'           => [
+	),
+	'genesis-accessibility'           => array(
 		'drop-down-menu',
 		'headings',
 		'search-form',
 		'skip-links',
-	],
+	),
 	'genesis-after-entry-widget-area' => '',
 	'genesis-footer-widgets'          => 3,
-	'genesis-menus'                   => [
+	'genesis-menus'                   => array(
 		'primary'   => __( 'Header Menu', 'genesis-sample' ),
 		'secondary' => __( 'Footer Menu', 'genesis-sample' ),
-	],
-];
+	),
+);
