@@ -13,15 +13,13 @@ import browserSync from 'browser-sync'
 const PRODUCTION = yargs.argv.prod
 
 export const styles = () => {
-  return src(['src/scss/style.scss'])
+  return src(['src/scss/bundle.scss'])
     .pipe(gulpif(!PRODUCTION, sourcemaps.init()))
     .pipe(sass().on('error', sass.logError))
     .pipe(gulpif(PRODUCTION, postcss([autoprefixer])))
     .pipe(gulpif(PRODUCTION, cleanCss({ compatibility: 'ie8' })))
-    .pipe(gulpif(!PRODUCTION, sourcemaps.write('./', {
-      includeContent: false
-    })))
-    .pipe(dest('./'))
+    .pipe(gulpif(!PRODUCTION, sourcemaps.write()))
+    .pipe(dest('dist/css'))
     .pipe(server.stream())
 }
 
