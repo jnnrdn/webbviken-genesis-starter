@@ -29,13 +29,6 @@ function genesis_sample_localization_setup() {
 }
 
 /**
- * Remove Genesis default child theme style sheet
- *
- * @uses  genesis_meta  <genesis/lib/css/load-styles.php>
-*/
-remove_action( 'genesis_meta', 'genesis_load_stylesheet' );
-
-/**
  * Add child theme style sheet
  *
  * @uses  genesis_meta  <genesis/lib/css/load-styles.php>
