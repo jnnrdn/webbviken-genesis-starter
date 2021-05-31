@@ -1,3 +1,5 @@
+@use '../abstracts/mixins';
+
 /* Search Form
 --------------------------------------------- */
 
@@ -23,4 +25,8 @@
 	padding: 0;
 	position: absolute;
 	width: 1px;
+
+	&:focus {
+		@include mixins.accessibility-focus;
+	}
 }
