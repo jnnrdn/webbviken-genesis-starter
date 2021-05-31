@@ -1,3 +1,5 @@
+@use './colors' as c;
+
 @mixin before($content: '', $pos: absolute) {
     position: relative;
     
@@ -41,4 +43,22 @@
 	text-decoration: none;
 	width: auto;
 	z-index: 100000; /* Above WP toolbar. */
+}
+
+@mixin menu-toggle($class-name) {
+    background-color: transparent;
+	border-width: 0;
+	color: #333;
+	display: block;
+	margin: 0 auto;
+	overflow: hidden;
+	text-align: center;
+	visibility: visible;
+
+    #{$class-name}:focus,
+    #{$class-name}:hover {
+        background-color: transparent;
+        border-width: 0;
+        color: c.$teal;
+    }
 }

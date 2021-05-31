@@ -14,10 +14,14 @@
 		position: sticky;
 		top: 0;
 		z-index: 9999;
-	}
 
-	.admin-bar .site-header {
-		top: 32px;
+		.admin-bar & {
+			top: 32px;
+		}
+
+		& .dashicons-before::before {
+			transition: none;
+		}
 	}
 
 }

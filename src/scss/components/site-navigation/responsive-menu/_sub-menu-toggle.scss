@@ -1,0 +1,32 @@
+@use '../../../abstracts/mixins';
+
+.sub-menu-toggle {
+    @include mixins.menu-toggle('&');
+
+    float: right;
+    padding: 9px 10px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 100;
+
+    .sub-menu & {
+        padding: 12px 10px;
+    }
+
+    &::before {
+        display: inline-block;
+        text-rendering: auto;
+        transform: rotate(0);
+        transition: transform 0.25s ease-in-out;
+    }
+
+    &.activated::before {
+        transform: rotate(180deg);
+    }
+
+    @media only screen and (min-width: 960px) {
+        display: none;
+        visibility: hidden;
+    }
+}
