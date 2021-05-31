@@ -1,25 +1,13 @@
-.after-entry,
-.archive-description {
-	margin-bottom: 40px;
-}
-
 .after-entry {
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
 	padding: 20px 30px;
-}
+	margin-bottom: 40px;
 
-.after-entry .widget:last-of-type {
-	margin-bottom: 0;
-}
-
-@media only screen and (min-width: 960px) {
-
-	.after-entry {
-		padding: 40px 60px;
+	& .widget:last-of-type {
+		margin-bottom: 0;
 	}
 
-	.after-entry .enews {
-		padding-left: 30px;
-		padding-right: 30px;
+	@media only screen and (min-width: 960px) {
+		padding: 40px 60px;
 	}
 }
