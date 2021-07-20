@@ -10,6 +10,11 @@ import gulpif from 'gulp-if'
 import imagemin from 'gulp-imagemin'
 import webpack from 'webpack-stream'
 import browserSync from 'browser-sync'
+import named from 'vinyl-named'
+import zip from 'gulp-zip'
+import info from './package.json'
+import replace from 'gulp-replace'
+
 const PRODUCTION = yargs.argv.prod
 
 export const styles = () => {
@@ -38,6 +43,7 @@ export const clean = () => del(['dist'])
 
 export const scripts = () => {
   return src('src/js/bundle.js')
+    .pipe(named())
     .pipe(webpack({
       module: {
         rules: [
@@ -46,7 +52,7 @@ export const scripts = () => {
             use: {
               loader: 'babel-loader',
               options: {
-                presets: []
+                presets: ['@babel/preset-env']
               }
             }
           }
@@ -55,7 +61,10 @@ export const scripts = () => {
       mode: PRODUCTION ? 'production' : 'development',
       devtool: !PRODUCTION ? 'inline-source-map' : false,
       output: {
-        filename: 'bundle.js'
+        filename: '[name].js'
+      },
+      externals: {
+        jquery: 'jQuery'
       }
     }))
     .pipe(dest('dist/js'))
@@ -79,11 +88,34 @@ export const watchForChanges = () => {
   watch('src/images/**/*.{jpg,jpeg,png,svg,gif}', series(images, reload))
   watch(['src/**/*', '!src/{images,js,scss}', '!src/{images,js,scss}/**/*'], series(copy, reload))
   watch('src/js/**/*.js', series(scripts, reload))
-  watch('**/*.php', reload)
+  // watch('**/*.php', reload)
+  // watch('**/*.css', reload)
+}
+
+export const compress = () => {
+  return src([
+    '**/*',
+    '!node_modules{,/**}',
+    '!bundled{,/**}',
+    '!src{,/**}',
+    '!.babelrc',
+    '!.gitignore',
+    '!gulpfile.babel.js',
+    '!package.json',
+    '!package-lock.json'
+  ])
+    .pipe(
+      gulpif(
+        file => file.relative.split('.').pop() !== 'zip',
+        replace('_themename', info.name)
+      )
+    )
+    .pipe(zip(`${info.name}.zip`))
+    .pipe(dest('bundled'))
 }
 
 export const dev = series(clean, parallel(styles, images, copy, scripts), serve, watchForChanges)
 
-export const build = series(clean, parallel(styles, images, copy, scripts))
+export const build = series(clean, parallel(styles, images, copy, scripts), compress)
 
 export default dev
